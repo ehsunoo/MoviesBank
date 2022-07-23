@@ -10,7 +10,8 @@ function Genres() {
 
   // router.query.genre
 
-  return <Content title={router.query.genre} movies={movies} />;
+  return <></>;
+  // return <Content title={router.query.genre} movies={movies} />;
 }
 
 export default Genres;
