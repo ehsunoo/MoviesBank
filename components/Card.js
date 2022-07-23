@@ -1,15 +1,19 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./styles/Card.module.scss";
-import { Card } from "antd";
 
-const { Meta } = Card;
-
-function Card2() {
+function Card({ movie }) {
+  const imageSrc = `https://image.tmdb.org/t/p/w300${movie.poster_path}`;
   return (
-    <Card hoverable style={{ width: 240 }} cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}>
-      <Meta title="Europe Street beat" description="www.instagram.com" />
-    </Card>
+    <div className={styles.container}>
+      <div className={styles.cover}>
+        <img src={imageSrc} />
+      </div>
+      <div className={styles.details}>
+        <p>{movie.title}</p>
+      </div>
+    </div>
   );
 }
 
-export default Card2;
+export default Card;

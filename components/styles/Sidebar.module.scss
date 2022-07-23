@@ -1,4 +1,48 @@
 .container {
   display: flex;
   flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 2rem 1rem;
+  padding: 1rem;
+  height: fit-content;
+}
+
+.logo {
+  max-width: 40%;
+  margin: 0 auto 2rem auto;
+}
+
+.discover,
+.genres {
+  color: rgba(255, 255, 255, 0.527);
+
+  h2 {
+    color: white;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 0.8rem;
+  }
+  span {
+    margin-left: 0.3rem;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: rgb(255, 196, 0);
+    }
+  }
 }

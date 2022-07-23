@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import HomeContent from "../components/HomeContent";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -13,7 +11,6 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <HomeContent />
       </main>
     </div>
   );
