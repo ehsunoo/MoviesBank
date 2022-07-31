@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // Styles
 import styles from "../movie/styles/Content.module.scss";
@@ -43,15 +44,7 @@ function Content({ movie, cast }) {
             <li key={item?.id}>
               <Link href={`/person/${item?.id}`}>
                 <a>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w185/${item?.profile_path}`}
-                    title={item?.name}
-                    onError={({ currentTarget }) => {
-                      currentTarget.onerror = null; // prevents looping
-                      currentTarget.src = "/assets/person.svg";
-                    }}
-                    alt={item?.name}
-                  />
+                  <Image src={`https://image.tmdb.org/t/p/w185${item?.profile_path}`} width={185} height={278} title={item?.name} layout="responsive" />
                 </a>
               </Link>
             </li>
