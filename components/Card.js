@@ -10,14 +10,7 @@ function Card({ movie }) {
       <Link href={`/movie/${movie?.id}`}>
         <a>
           <div className={styles.cover}>
-            {/* <img
-              src={imageSrc}
-              onError={({ currentTarget }) => {
-                currentTarget.onerror = null; // prevents looping
-                currentTarget.src = "/assets/noimage.png";
-              }}
-            /> */}
-            <Image src={imageSrc} width={300} layout="fill" />
+            <Image src={imageSrc} width={230} height={345} layout="fill" />
           </div>
           <div className={styles.details}>
             <p>{movie?.title}</p>
