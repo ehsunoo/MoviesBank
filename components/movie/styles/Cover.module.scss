@@ -1,0 +1,11 @@
+.cover {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  img {
+    max-width: 330px;
+    height: fit-content;
+    object-fit: cover;
+    border-radius: 0.6rem;
+  }
+}

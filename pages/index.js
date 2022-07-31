@@ -7,11 +7,11 @@ export default function Home() {
       <Head>
         <title>Movies Bank</title>
         <meta name="description" content="Collection of movie's information." />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-      </main>
+      <main className={styles.main}></main>
     </div>
   );
 }

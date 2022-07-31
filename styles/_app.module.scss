@@ -1,9 +1,24 @@
 .main {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
   background: #020f02;
   background: -webkit-linear-gradient(top left, #020f02, #2a1c4d);
   background: -moz-linear-gradient(top left, #020f02, #2a1c4d);
   background: linear-gradient(to bottom right, #020f02, #2a1c4d);
   background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+// Smart Phone
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+  .main {
+    padding: 0;
+  }
 }

@@ -1,0 +1,146 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-weight: bold;
+  height: max-content;
+
+  .title {
+    font-size: 5vh;
+  }
+
+  .info {
+    font-size: 2vh;
+    color: gray;
+  }
+
+  .rate {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 1rem;
+    h3 {
+      color: white;
+      font-weight: bold;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-left: 0.5rem;
+      color: rgb(255, 196, 0);
+    }
+  }
+
+  .genres {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      color: white;
+      font-weight: bold;
+      flex: 1;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      flex: 3;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      margin: 0 0.5rem;
+      font-family: sans-serif;
+      font-weight: normal;
+      span {
+        margin-left: 0.3rem;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .synopsis {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    h3 {
+      color: white;
+      font-weight: bold;
+    }
+    p {
+      text-align: justify;
+      font-weight: normal;
+      text-transform: none;
+    }
+  }
+
+  .cast {
+    margin-top: 1rem;
+    h3 {
+      color: white;
+      font-weight: bold;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 0.1rem;
+    }
+    li img {
+      width: 1.5rem;
+      height: 1.5rem;
+      object-fit: cover;
+      border-radius: 50%;
+
+      &:hover {
+        transform: scale(2, 2);
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    a {
+      padding: 0.5rem 1.5rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      margin-right: 0.5rem;
+      color: white;
+      text-transform: none;
+      font-weight: normal;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-right-color: rgba(255, 255, 255, 0.1);
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        color: black;
+        background-color: rgb(255, 196, 0);
+      }
+    }
+  }
+}
+
+// Smart Phone
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+  .content {
+    padding: 1rem;
+  }
+
+  .cast ul {
+    justify-content: center;
+  }
+}

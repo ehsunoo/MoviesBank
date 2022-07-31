@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 4rem 2rem 4rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  font-family: "Montserrat";
+  color: white;
+  h1 {
+    color: white;
+    margin: 0;
+  }
+  h1::first-letter {
+    text-transform: capitalize;
+  }
+  p {
+    margin: 0 0.5rem;
+  }
+}
+
+.searchbox {
+  align-self: center;
+}
+
+// Smart Phone
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+  .container {
+    justify-content: center;
+    margin: 1rem;
+  }
+  .title{
+    text-align: center;
+  }
+}

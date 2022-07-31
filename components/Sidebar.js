@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 
 import styles from "./styles/Sidebar.module.scss";
@@ -6,7 +7,7 @@ import styles from "./styles/Sidebar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFire, faStar, faCalendar, faCircle } from "@fortawesome/free-solid-svg-icons";
 import { getGenres } from "../redux/slices/genresSlice";
-import Link from "next/link";
+import LoadingSpinner from "./LoadingSpinner";
 
 function Sidebar() {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ function Sidebar() {
         <h2>Discover</h2>
         <ul>
           <li>
-            <Link href="/">
+            <Link href="/movies/popular/1">
               <a>
                 <FontAwesomeIcon icon={faFire} />
                 <span> Popular</span>
@@ -31,7 +32,7 @@ function Sidebar() {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/movies/top-rated/1">
               <a>
                 <FontAwesomeIcon icon={faStar} />
                 <span>Top Rated</span>
@@ -39,7 +40,7 @@ function Sidebar() {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/movies/upcoming/1">
               <a>
                 <FontAwesomeIcon icon={faCalendar} />
                 <span> Upcoming</span>
@@ -51,15 +52,19 @@ function Sidebar() {
       <div className={styles.genres}>
         <h2>Genres</h2>
         <ul>
-          {genres.map((genre) => (
-            <li key={genre.id}>
-              <Link href={`/genres/${genre.id}`}>
-                <a>
-                  <FontAwesomeIcon icon={faCircle} /> <span>{genre.name}</span>
-                </a>
-              </Link>
-            </li>
-          ))}
+          {genres ? (
+            genres?.map((genre, index) => (
+              <li key={index}>
+                <Link href={`/genres/${genre?.id}/${genre?.name}/1`}>
+                  <a>
+                    <FontAwesomeIcon icon={faCircle} /> <span>{genre?.name}</span>
+                  </a>
+                </Link>
+              </li>
+            ))
+          ) : (
+            ""
+          )}
         </ul>
       </div>
     </div>

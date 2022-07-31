@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 6;
+}
+
+.main {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  margin: 0 2.5rem;
+  border-radius: 0.6rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+// Desktop
+@media screen and (min-width: 1024) {
+  .main {
+    flex-direction: row;
+  }
+}
+
+// Tablet
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    flex: 5;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .title {
+    margin-top: 2rem;
+  }
+}
+
+// Smart Phone
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+  .container {
+    flex: 0;
+  }
+  .main {
+    flex-direction: column;
+    margin: 0;
+    padding: 0.5rem;
+  }
+  .cover img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10rem;
+  min-height: 40px;
+}
+
+.icon {
+  padding: 0.5rem 0.8rem;
+}
+
+.input {
+  input {
+    background-color: inherit;
+    border: 0;
+    outline: transparent;
+    color: white;
+  }
+}
