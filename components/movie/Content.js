@@ -44,7 +44,7 @@ function Content({ movie, cast }) {
             <li key={item?.id}>
               <Link href={`/person/${item?.id}`}>
                 <a>
-                  <Image src={`https://image.tmdb.org/t/p/w185${item?.profile_path}`} width={185} height={278} title={item?.name} layout="responsive" />
+                  <Image src={`https://image.tmdb.org/t/p/w185${item?.profile_path}`} width={185} height={278} title={item?.name} alt={item?.name} objectFit="contain" layout="responsive" />
                 </a>
               </Link>
             </li>

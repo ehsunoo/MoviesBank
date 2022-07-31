@@ -10,7 +10,7 @@ function Card({ movie }) {
       <Link href={`/movie/${movie?.id}`}>
         <a>
           <div className={styles.cover}>
-            <Image src={imageSrc} width={230} height={345} layout="responsive" />
+            <Image src={imageSrc} width={230} height={345} layout="responsive" alt={movie.title} objectFit="contain" />
           </div>
           <div className={styles.details}>
             <p>{movie?.title}</p>
