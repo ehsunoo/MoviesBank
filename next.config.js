@@ -7,6 +7,15 @@ const nextConfig = {
   env: {
     BASE_URL: process.env.BASE_URL,
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/movies/popular/1",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
