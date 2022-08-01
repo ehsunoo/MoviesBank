@@ -85,21 +85,17 @@
       font-weight: bold;
     }
     ul {
-      // display: flex;
-      // flex-direction: row;
-      // flex-wrap: wrap;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(24px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
       list-style: none;
       padding: 0;
     }
     li {
       margin: 0.1rem;
+      overflow: hidden;
+      border-radius: 50%;
     }
     li img {
-      width: 1.5rem;
-      height: 1.5rem;
-      object-fit: cover;
       border-radius: 50%;
 
       &:hover {
