@@ -1,7 +1,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 240px;
+  min-width: 230px;
+  min-height: 345px;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(2px);

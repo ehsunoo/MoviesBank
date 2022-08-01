@@ -9,21 +9,23 @@ function Card({ movie }) {
   const imgSrc = `${process.env.IMAGE_BASE_URL}/w300${movie?.poster_path}`;
   const [coverSrc, coverErrorHandler] = useImage(imgSrc);
 
-  const [loaded, setLoaded] = useState(true);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setLoaded(true);
+    setLoaded(false);
   }, []);
 
   const onLoadHandler = useCallback(() => {
-    setLoaded(false);
+    setLoaded(true);
   }, []);
 
   return (
     <div className={styles.container}>
       <Link href={`/movie/${movie?.id}`}>
         <a>
-          <div className={styles.cover}>{!loaded ? <Image src={coverSrc} width={230} height={345} layout="responsive" alt={movie?.title} objectFit="contain" onError={coverErrorHandler} onLoad={onLoadHandler} /> : <Loading width={30} height={30} />}</div>
+          <div className={styles.cover}>
+            <Image src={coverSrc} width={230} height={345} layout="responsive" alt={movie?.title} objectFit="contain" onError={coverErrorHandler} placeholder="blur" onLoad={onLoadHandler} />
+          </div>
           <div className={styles.details}>
             <p>{movie?.title}</p>
           </div>
