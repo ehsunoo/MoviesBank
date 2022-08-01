@@ -28,10 +28,10 @@ function Card({ movie }) {
                 layout="responsive"
                 alt={movie?.title}
                 objectFit="contain"
-                onError={coverErrorHandler}
                 onLoadingComplete={() => {
                   setLoaded(true);
                 }}
+                onError={coverErrorHandler}
               />
             ) : (
               <Loading width={10} height={10} />
