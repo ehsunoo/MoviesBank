@@ -6,7 +6,7 @@ const nextConfig = {
   },
   env: {
     BASE_URL: process.env.BASE_URL,
-    IMAGE_URL_BASE: process.env.IMAGE_BASE_URL,
+    IMAGE_BASE_URL: process.env.IMAGE_BASE_URL,
   },
   async redirects() {
     return [
