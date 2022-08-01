@@ -4,10 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 
 import styles from "./styles/Sidebar.module.scss";
 
+// Fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFire, faStar, faCalendar, faCircle } from "@fortawesome/free-solid-svg-icons";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
 import { getGenres } from "../redux/slices/genresSlice";
-import LoadingSpinner from "./LoadingSpinner";
 
 function Sidebar() {
   const dispatch = useDispatch();
@@ -52,19 +56,17 @@ function Sidebar() {
       <div className={styles.genres}>
         <h2>Genres</h2>
         <ul>
-          {genres ? (
-            genres?.map((genre, index) => (
-              <li key={index}>
-                <Link href={`/genres/${genre?.id}/${genre?.name}/1`}>
-                  <a>
-                    <FontAwesomeIcon icon={faCircle} /> <span>{genre?.name}</span>
-                  </a>
-                </Link>
-              </li>
-            ))
-          ) : (
-            ""
-          )}
+          {genres
+            ? genres?.map((genre, index) => (
+                <li key={index}>
+                  <Link href={`/genres/${genre?.id}/${genre?.name}/1`}>
+                    <a>
+                      <FontAwesomeIcon icon={faCircle} /> <span>{genre?.name}</span>
+                    </a>
+                  </Link>
+                </li>
+              ))
+            : ""}
         </ul>
       </div>
     </div>
