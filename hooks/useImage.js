@@ -4,7 +4,7 @@ export const useImage = (inputImageSrc) => {
   const [imageSrc, setImageSrc] = useState(inputImageSrc);
 
   function imageSrcErrorHandler() {
-    setImageSrc("/assets/noimage.png");
+    setImageSrc(`${process.env.BASE_URL}/assets/noimage.png`);
   }
 
   return { imageSrc, imageSrcErrorHandler };
