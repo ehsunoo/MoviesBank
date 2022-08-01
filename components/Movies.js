@@ -18,6 +18,7 @@ import Header from "./Header";
 function Movies({ title, type, movies, page }) {
   const currentPage = parseInt(page);
   const [previousPagePath, nextPagePath] = usePage(page);
+
   return (
     <div className={styles.container}>
       <Header title={title} type={type} />

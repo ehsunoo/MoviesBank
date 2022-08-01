@@ -23,9 +23,7 @@ function Card({ movie }) {
     <div className={styles.container}>
       <Link href={`/movie/${movie?.id}`}>
         <a>
-          <div className={styles.cover}>
-            <Image src={coverSrc} width={230} height={345} layout="responsive" alt={movie?.title} objectFit="contain" onError={coverErrorHandler} placeholder="blur" onLoad={onLoadHandler} />
-          </div>
+          <div className={styles.cover}>{loaded ? <Image src={coverSrc} width={230} height={345} layout="responsive" alt={movie?.title} objectFit="contain" onError={coverErrorHandler} onLoadingComplete={onLoadHandler} /> : <Loading width={10} height={10} />}</div>
           <div className={styles.details}>
             <p>{movie?.title}</p>
           </div>
