@@ -85,9 +85,11 @@
       font-weight: bold;
     }
     ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      // display: flex;
+      // flex-direction: row;
+      // flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(24px, 1fr));
       list-style: none;
       padding: 0;
     }
