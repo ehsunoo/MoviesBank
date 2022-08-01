@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ["image.tmdb.org", "localhost"],
+    domains: ["image.tmdb.org","movies-bank.vercel.app", "localhost"],
   },
   env: {
     BASE_URL: process.env.BASE_URL,
