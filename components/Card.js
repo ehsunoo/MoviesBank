@@ -6,7 +6,7 @@ import { useImage } from "../hooks/useImage";
 
 function Card({ movie }) {
   const imgSrc = `${process.env.IMAGE_BASE_URL}/w300${movie?.poster_path}`;
-  const { coverSrc, coverErrorHandler } = useImage(imgSrc);
+  const [coverSrc, coverErrorHandler] = useImage(imgSrc);
   return (
     <div className={styles.container}>
       <Link href={`/movie/${movie?.id}`}>

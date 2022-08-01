@@ -7,7 +7,7 @@ import styles from "./styles/Cover.module.scss";
 
 function Cover({ movie }) {
   const imgSrc = `${process.env.IMAGE_BASE_URL}/w500${movie?.poster_path}`;
-  const { coverSrc, coverErrorHandler } = useImage(imgSrc);
+  const [coverSrc, coverErrorHandler] = useImage(imgSrc);
 
   return (
     <div className={styles.cover}>

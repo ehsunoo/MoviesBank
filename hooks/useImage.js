@@ -7,5 +7,5 @@ export const useImage = (inputImageSrc) => {
     setImageSrc(`${process.env.BASE_URL}/assets/noimage.png`);
   }
 
-  return { imageSrc, imageSrcErrorHandler };
+  return [imageSrc, imageSrcErrorHandler];
 };
