@@ -6,7 +6,7 @@ import { useImage } from "../../hooks/useImage";
 import styles from "./styles/Cover.module.scss";
 
 function Cover({ movie }) {
-  const imgSrc = `${process.env.IMAGE_URL_BASE}/w500${movie?.poster_path}`;
+  const imgSrc = `${process.env.IMAGE_BASE_URL}/w500${movie?.poster_path}`;
   const { coverSrc, coverErrorHandler } = useImage(imgSrc);
 
   return (

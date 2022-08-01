@@ -45,9 +45,9 @@ function Content({ movie, cast }) {
               <Link href={`/person/${item?.id}`}>
                 <a>
                   {item?.profile_path === "null" || item?.profile_path === null ? (
-                    <Image src={`/assets/person.svg`} width={24} height={24} title={item?.name} alt={item?.name} objectFit="cover" layout="responsive" />
+                    <Image src={`${process.env.BASE_URL}/assets/person.svg`} width={24} height={24} title={item?.name} alt={item?.name} objectFit="cover" layout="responsive" />
                   ) : (
-                    <Image src={`${process.env.IMAGE_URL_BASE}/w185${item?.profile_path}`} width={24} height={24} title={item?.name} alt={item?.name} objectFit="cover" layout="responsive" />
+                    <Image src={`${process.env.IMAGE_BASE_URL}/w185${item?.profile_path}`} width={24} height={24} title={item?.name} alt={item?.name} objectFit="cover" layout="responsive" />
                   )}
                 </a>
               </Link>
