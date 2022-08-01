@@ -28,8 +28,9 @@ function Card({ movie }) {
                 layout="responsive"
                 alt={movie?.title}
                 objectFit="contain"
-                onLoadingComplete={() => {
+                onLoadingComplete={(e) => {
                   setLoaded(true);
+                  typeof onLoad === "function" && onLoad(e);
                 }}
                 onError={coverErrorHandler}
               />
