@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+
+import { useImage } from "../../hooks/useImage";
 
 import styles from "./styles/Cover.module.scss";
 
 function Cover({ movie }) {
+  const imgSrc = `${process.env.IMAGE_URL_BASE}/w500${movie?.poster_path}`;
+  const { coverSrc, coverErrorHandler } = useImage(imgSrc);
+
   return (
     <div className={styles.cover}>
-      <Image width={330} height={495} src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}   layout="responsive" objectFit="contain" alt={movie.title} />
+      <Image width={330} height={495} src={coverSrc} layout="responsive" objectFit="contain" alt={movie.title} onError={coverErrorHandler} />
     </div>
   );
 }

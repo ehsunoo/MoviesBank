@@ -2,15 +2,17 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./styles/Card.module.scss";
+import { useImage } from "../hooks/useImage";
 
 function Card({ movie }) {
-  const imageSrc = `https://image.tmdb.org/t/p/w300${movie?.poster_path}`;
+  const imgSrc = `https://image.tmdb.org/t/p/w300${movie?.poster_path}`;
+  const { coverSrc, coverErrorHandler } = useImage(imgSrc);
   return (
     <div className={styles.container}>
       <Link href={`/movie/${movie?.id}`}>
         <a>
           <div className={styles.cover}>
-            <Image src={imageSrc} width={230} height={345} layout="responsive" alt={movie.title} objectFit="contain" />
+            <Image src={coverSrc} width={230} height={345} layout="responsive" alt={movie?.title} objectFit="contain" onError={coverErrorHandler} />
           </div>
           <div className={styles.details}>
             <p>{movie?.title}</p>
