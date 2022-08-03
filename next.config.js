@@ -2,11 +2,12 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ["image.tmdb.org","movies-bank.vercel.app", "localhost"],
+    domains: ["image.tmdb.org", "movies-bank.vercel.app", "localhost"],
   },
   env: {
     BASE_URL: process.env.BASE_URL,
     IMAGE_BASE_URL: process.env.IMAGE_BASE_URL,
+    API_KEY: process.env.API_KEY,
   },
   async redirects() {
     return [
