@@ -1,8 +1,9 @@
 import React from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
-import { wrapper } from "../../redux/store";
 
 // Redux
+import { wrapper } from "../../redux/store";
 import { getCast, getMovie } from "../../redux/slices/movieSlice";
 import { getRecommendations } from "../../redux/slices/moviesSlice";
 
