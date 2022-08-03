@@ -14,7 +14,17 @@ function MovieDetail(props) {
   const router = useRouter();
   const data = { ...props };
   if (router.isFallback) return <LoadingSpinner />;
-  return <Movie data={data} />;
+  return (
+    <>
+      <Head>
+        <title>Movies Bank | {data.movie.title}</title>
+        <meta name="description" content="Collection of movie's information." />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Movie data={data} />;
+    </>
+  );
 }
 
 export const getStaticPaths = async () => {
@@ -30,7 +40,6 @@ export const getStaticProps = wrapper.getStaticProps((store) => async (context) 
   await store.dispatch(getCast(id));
   await store.dispatch(getRecommendations(id));
   const data = store.getState();
-  // console.log("Static :", data)
   return {
     props: {
       movie: data.movie.item,
