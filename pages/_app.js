@@ -23,7 +23,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <div className={styles.main}>
         <Sidebar />
-        <Component {...pageProps} />
+        <div className={styles.component}>
+          <Component {...pageProps} />
+        </div>
       </div>
       <Footer />
     </>
