@@ -1,4 +1,6 @@
-import React, { useEffect } from "react";
+// @ts-nocheck
+import React from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 
 // Redux
@@ -13,7 +15,14 @@ function Popular({ movies }) {
   const router = useRouter();
   const currentPage = router.query.page;
   if (router.isFallback) return <LoadingSpinner />;
-  return <Movies title="Popular" type="Movies" movies={movies} page={currentPage} />;
+  return (
+    <>
+      <Head>
+        <title>Movie's Bank | Popular Movies</title>
+      </Head>
+      <Movies title="Popular" type="Movies" movies={movies} page={currentPage} />;
+    </>
+  );
 }
 
 export const getStaticPaths = async () => {

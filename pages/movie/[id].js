@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -18,10 +19,7 @@ function MovieDetail(props) {
   return (
     <>
       <Head>
-        <title>Movies Bank | {data.movie.title}</title>
-        <meta name="description" content="Collection of movie's information." />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Movie's Bank | {data.movie.title}</title>
       </Head>
       <Movie data={data} />;
     </>

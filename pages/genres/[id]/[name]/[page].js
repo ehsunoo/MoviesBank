@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 
 // Redux
@@ -13,7 +14,14 @@ function Genres({ movies, name }) {
   const router = useRouter();
   const currentPage = router.query.page;
   if (router.isFallback) return <LoadingSpinner />;
-  return <Movies title={`${name}'s`} type="Genre" movies={movies} page={currentPage} />;
+  return (
+    <>
+      <Head>
+        <title>Movie's Bank | `${name}'s Genre`</title>
+      </Head>
+      <Movies title={`${name}'s`} type="Genre" movies={movies} page={currentPage} />;
+    </>
+  );
 }
 
 export const getStaticPaths = async () => {
