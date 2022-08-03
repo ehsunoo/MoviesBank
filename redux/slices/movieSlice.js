@@ -17,7 +17,7 @@ export const getMovie = createAsyncThunk(
 //prettier-ignore
 export const getCast = createAsyncThunk(
   "movie/cast",
-  async (id, dis) => {
+  async (id) => {
     return await fetch(`${process.env.BASE_URL}/api/movie/credits/${id}`).then(res => res.json());
   }
 );
@@ -39,7 +39,5 @@ const movieSlice = createSlice({
     },
   },
 });
-
-export const { cleanUpCast, cleanUpMovie, enableLoading, disableLoading } = movieSlice.actions;
 
 export default movieSlice.reducer;
