@@ -18,7 +18,7 @@ function Popular({ movies }) {
   return (
     <>
       <Head>
-        <title>Movie's Bank | Popular Movies</title>
+        <title>Movies Bank | Popular Movies</title>
       </Head>
       <Movies title="Popular" type="Movies" movies={movies} page={currentPage} />;
     </>

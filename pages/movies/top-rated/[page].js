@@ -18,7 +18,7 @@ function TopRated({ movies }) {
   return (
     <>
       <Head>
-        <title>Movie's Bank | Top Rated Movies</title>
+        <title>Movies Bank | Top Rated Movies</title>
       </Head>
       <Movies title="Top Rated" type="Movies" movies={movies} page={currentPage} />;
     </>

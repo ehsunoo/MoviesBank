@@ -17,7 +17,7 @@ function Genres({ movies, name }) {
   return (
     <>
       <Head>
-        <title>Movie's Bank | `${name}'s Genre`</title>
+        <title>Movies Bank | ${name} Genre</title>
       </Head>
       <Movies title={`${name}'s`} type="Genre" movies={movies} page={currentPage} />;
     </>

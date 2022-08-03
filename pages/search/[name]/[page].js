@@ -26,7 +26,7 @@ function Search() {
   return (
     <>
       <Head>
-        <title>Movie's Bank | `"${router?.query?.name}"` Items</title>
+        <title>Movies Bank | `"${router?.query?.name}"` Items</title>
       </Head>
       <Movies title={router?.query?.name} type="Search Results" movies={movies} page={router?.query?.page} />;
     </>

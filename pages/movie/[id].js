@@ -19,7 +19,7 @@ function MovieDetail(props) {
   return (
     <>
       <Head>
-        <title>Movie's Bank | {data.movie.title}</title>
+        <title>Movies Bank | {data.movie.title}</title>
       </Head>
       <Movie data={data} />;
     </>

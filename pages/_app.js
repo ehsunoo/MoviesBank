@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Movie's Bank</title>
+        <title>Movies Bank</title>
         <meta name="description" content="Collection of movie's information." />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

@@ -17,7 +17,7 @@ function Upcoming({ movies }) {
   return (
     <>
       <Head>
-        <title>Movie's Bank | Upcoming Movies</title>
+        <title>Movies Bank | Upcoming Movies</title>
       </Head>
       <Movies title="Upcoming" type="Movies" movies={movies} page={currentPage} />;
     </>
