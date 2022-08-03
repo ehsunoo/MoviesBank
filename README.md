@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Movie's Bank
+A modern movie's information library built with Next.js 
 
-## Getting Started
+![screenshot](https://user-images.githubusercontent.com/7151395/182613961-e1853669-cc64-412b-a10a-6e5029a862a7.jpg)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Technologies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[![Next](https://img.shields.io/badge/Next.js-12.2.2-green)](#)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+[![Redux-Toolkit](https://img.shields.io/badge/ReduxToolkit-1.8.3-brown)](#)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+[![Next-Redux-Wrapper](https://img.shields.io/badge/Next_Redux_Wrapper-12.2.2-blue)](#)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+[![HTML5](https://img.shields.io/badge/HTML-5-orange)](#)
 
-## Learn More
+[![SASS](https://img.shields.io/badge/Saas-1.52.2-red)](#)
 
-To learn more about Next.js, take a look at the following resources:
+[![FontAweSome](https://img.shields.io/badge/Fontawesome-6.1.1-yellow)](#)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Features
+- Modern UI with dark mode
+- Responsive design
+- Functional components based
+- API route implemented
+- Static Site Generation(SSG) implemented  
+- Image optimization
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
+This project deployed at [Vercel](http://vercel.com) and can be accessed by clicking [Here](https://movies-bank.vercel.app/)!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Copyright
+All rights reserved.
