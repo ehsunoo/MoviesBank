@@ -1,22 +1,30 @@
-import Image from "next/image";
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 // Styles
 import styles from "./styles/Person.module.scss";
+
+// Fontawesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 // Components
 import Header from "./Header";
 import Recommendations from "./movie/Recommendations";
 
-function Person({ person, movies }) {
+function Person({ person, movies, page }) {
   const imgSrc = `${process.env.IMAGE_BASE_URL}/w780${person?.profile_path}`;
 
   const birthday = new Date(person?.birthday).getFullYear();
   const deathday = person?.deathday !== null ? new Date(person?.deathday).getFullYear() : null;
 
+  const currentPage = parseInt(page);
+  const [previousPagePath, nextPagePath] = usePage(currentPage);
+
   return (
     <div className={styles.container}>
-      <Header title={person?.name} />
+      <Header title={person?.name} type="information" />
       <div className={styles.main}>
         <div className={styles.cover}>
           <Image width={330} height={495} src={imgSrc} layout="responsive" objectFit="contain" alt={person?.name} />
@@ -42,6 +50,22 @@ function Person({ person, movies }) {
         <span>Movies</span>
       </div>
       <Recommendations recommendations={movies} />
+      <div className={styles.pages}>
+        {currentPage > 1 ? (
+          <Link href={previousPagePath}>
+            <a className={styles.previousPage}>
+              <FontAwesomeIcon icon={faArrowLeft} />
+              <span> Previous Page</span>
+            </a>
+          </Link>
+        ) : null}
+        <Link href={nextPagePath}>
+          <a className={styles.nextPage}>
+            <span>Next Page </span>
+            <FontAwesomeIcon icon={faArrowRight} />
+          </a>
+        </Link>
+      </div>
     </div>
   );
 }

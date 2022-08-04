@@ -16,8 +16,8 @@ export const getPerson = createAsyncThunk(
 // prettier-ignore
 export const getPersonMovies = createAsyncThunk(
   "person/movies",
-  async (id) => {
-    return await fetch(`${process.env.BASE_URL}/api/person/movies/${id}`).then((res) => res.json());
+  async (values) => {
+    return await fetch(`${process.env.BASE_URL}/api/person/movies/${values.id}/${values.page}`).then((res) => res.json());
   }
 );
 
@@ -29,7 +29,7 @@ const personSlice = createSlice({
       state.item = { ...action.payload };
     },
     [getPersonMovies.fulfilled]: (state, action) => {
-      state.items = [...action.payload.results]
+      state.items = [...action.payload.results];
     },
   },
 });
