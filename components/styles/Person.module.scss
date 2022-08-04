@@ -37,9 +37,14 @@
 
 .name {
   h3 {
-    color: inherit;
+    color: white;
+    margin: 0;
     font-size: 5vh;
   }
+}
+
+.date {
+  color: white;
 }
 
 .imdb {
@@ -70,6 +75,7 @@
   flex-direction: row;
   align-items: baseline;
   color: white;
+  margin: 0 3rem;
   p {
     color: inherit;
     font-size: 1.5rem;
