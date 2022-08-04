@@ -31,7 +31,7 @@ export const getStaticProps = wrapper.getStaticProps((store) => async (context) 
   return {
     props: {
       person: data.person.item,
-      movies: data.person.movies,
+      movies: data.person.movies.items,
     },
   };
 });
