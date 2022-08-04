@@ -37,13 +37,11 @@ function Person({ person, movies }) {
           </div>
         </div>
       </div>
-      <div className={styles.movies}>
-        <div className={styles.recTitle}>
-          <p>Also Enteres In</p>
-          <span>Movies</span>
-          <Recommendations recommendations={movies} />
-        </div>
+      <div className={styles.recTitle}>
+        <p>Also Enteres In</p>
+        <span>Movies</span>
       </div>
+      <Recommendations recommendations={movies} />
     </div>
   );
 }
