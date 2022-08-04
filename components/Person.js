@@ -18,7 +18,6 @@ function Person({ person }) {
       <Header title={person?.name} />
       <div className={styles.main}>
         <div className={styles.cover}>
-          <img src={coverSrc} />
           <Image width={330} height={495} src={imgSrc} layout="responsive" objectFit="contain" alt={person?.name} />
         </div>
         <div className={styles.content}>
