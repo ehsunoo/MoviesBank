@@ -6,8 +6,9 @@ import styles from "./styles/Person.module.scss";
 
 // Components
 import Header from "./Header";
+import Recommendations from "./movie/Recommendations";
 
-function Person({ person }) {
+function Person({ person, movies }) {
   const imgSrc = `${process.env.IMAGE_BASE_URL}/w780${person?.profile_path}`;
 
   const birthday = new Date(person?.birthday).getFullYear();
@@ -36,7 +37,13 @@ function Person({ person }) {
           </div>
         </div>
       </div>
-      <div className={styles.movies}></div>
+      <div className={styles.movies}>
+        <div className={styles.recTitle}>
+          <p>Also Enteres In</p>
+          <span>Movies</span>
+          <Recommendations recommendations={movies} />
+        </div>
+      </div>
     </div>
   );
 }

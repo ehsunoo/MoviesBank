@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
 .main {
@@ -20,18 +19,26 @@
 
 .cover {
   padding: 1rem;
+  justify-content: center;
+  border-radius: 10px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  color: white;
+
+  p {
+    color: white;
+    font-family: "Montserrat";
+    text-align: justify;
+  }
 }
 
 .name {
   h3 {
     color: inherit;
+    font-size: 5vh;
   }
 }
 
@@ -55,6 +62,20 @@
       color: black;
       background-color: rgb(255, 196, 0);
     }
+  }
+}
+
+.recTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  color: white;
+  p {
+    color: inherit;
+    font-size: 1.5rem;
+  }
+  span {
+    margin-left: 0.3rem;
   }
 }
 

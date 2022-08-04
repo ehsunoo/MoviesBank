@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
   item: {},
+  items: [],
 };
 
 // prettier-ignore
@@ -12,12 +13,23 @@ export const getPerson = createAsyncThunk(
   }
 );
 
+// prettier-ignore
+export const getPersonMovies = createAsyncThunk(
+  "person/movies",
+  async (id) => {
+    return await fetch(`${process.env.BASE_URL}/api/person/movies/${id}`).then((res) => res.json());
+  }
+);
+
 const personSlice = createSlice({
   name: "person",
   initialState,
   extraReducers: {
     [getPerson.fulfilled]: (state, action) => {
       state.item = { ...action.payload };
+    },
+    [getPersonMovies.fulfilled]: (state, action) => {
+      state.items = [...action.payload.results]
     },
   },
 });

@@ -4,20 +4,7 @@
   font-family: "Montserrat";
   margin: 1rem 3rem;
 
-  .rec-title {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    color: white;
-    p {
-      color: inherit;
-      font-size: 1.5rem;
-    }
-    span {
-      margin-left: 0.3rem;
-    }
-  }
-  .rec-content {
+  .content {
     display: flex;
     flex-direction: row;
     justify-content: center;

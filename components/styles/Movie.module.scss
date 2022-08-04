@@ -19,6 +19,20 @@
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 }
 
+.recTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  color: white;
+  p {
+    color: inherit;
+    font-size: 1.5rem;
+  }
+  span {
+    margin-left: 0.3rem;
+  }
+}
+
 // Desktop
 @media screen and (min-width: 1024) {
   .main {

@@ -17,6 +17,10 @@ function Movie({ data }) {
         <Cover movie={data?.movie} />
         <Content movie={data?.movie} cast={data?.cast} />
       </div>
+      <div className={styles.recTitle}>
+        <p>Recommended</p>
+        <span>Movies</span>
+      </div>
       <Recommendations recommendations={data?.recommendations} />
     </div>
   );
