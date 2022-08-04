@@ -23,7 +23,7 @@ function Person({ person, movies, page }) {
   const deathday = person?.deathday !== null ? new Date(person?.deathday).getFullYear() : null;
 
   const currentPage = parseInt(page);
-  const totalPages = parseInt(movies?.total_pages);
+  const totalPages = movies?.total_pages;
   const [previousPagePath, nextPagePath] = usePage(currentPage);
 
   return (
@@ -63,7 +63,7 @@ function Person({ person, movies, page }) {
             </a>
           </Link>
         ) : null}
-        {currentPage < totalPages ? (
+        {+currentPage < +totalPages ? (
           <Link href={nextPagePath}>
             <a className={styles.nextPage}>
               <span>Next Page </span>
