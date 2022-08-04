@@ -23,7 +23,7 @@ function Person({ person }) {
       <div className={styles.main}>
         <div className={styles.cover}>
           <img src={coverSrc} />
-          {/* <Image width={330} height={495} src={coverSrc} layout="responsive" objectFit="contain" alt={person?.name} onError={coverErrorHandler} /> */}
+          <Image width={330} height={495} src={coverSrc} layout="responsive" objectFit="contain" alt={person?.name} onError={coverErrorHandler} />
         </div>
         <div className={styles.content}>
           <div className={styles.name}>
