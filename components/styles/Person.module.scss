@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.cover {
+  padding: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+}
+
+.name {
+  h3 {
+    color: inherit;
+  }
+}
+
+.imdb {
+  a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    margin-right: 0.5rem;
+    color: white;
+    text-transform: none;
+    font-weight: normal;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      color: black;
+      background-color: rgb(255, 196, 0);
+    }
+  }
+}

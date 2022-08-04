@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
+// Custom Hooks
 import { useImage } from "../../hooks/useImage";
 
+// Styles
 import styles from "./styles/Cover.module.scss";
 
 function Cover({ movie }) {

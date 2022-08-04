@@ -6,6 +6,7 @@ import moviesReducer from "../slices/moviesSlice";
 import movieReducer from "../slices/movieSlice";
 import genresReducer from "../slices/genresSlice";
 import searchReducer from "../slices/searchSlice";
+import personReducer from "../slices/personSlice";
 
 const makeStore = () =>
   configureStore({
@@ -14,6 +15,7 @@ const makeStore = () =>
       movie: movieReducer,
       genres: genresReducer,
       search: searchReducer,
+      person: personReducer,
     },
     devTools: true,
   });
