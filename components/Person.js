@@ -9,6 +9,9 @@ import styles from "./styles/Person.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
+// Custom Hooks
+import { usePage } from "../hooks/usePage";
+
 // Components
 import Header from "./Header";
 import Recommendations from "./movie/Recommendations";
