@@ -42,7 +42,7 @@ function Content({ movie, cast }) {
         <ul>
           {cast?.map((item) => (
             <li key={item?.id}>
-              <Link href={`/person/${item?.id}`}>
+              <Link href={`/person/${item?.id}/1`}>
                 <a>
                   {item?.profile_path === "null" || item?.profile_path === null ? (
                     <Image src={`${process.env.BASE_URL}/assets/person.svg`} width={24} height={24} title={item?.name} alt={item?.name} objectFit="cover" layout="responsive" />
