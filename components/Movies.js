@@ -18,6 +18,7 @@ import Header from "./Header";
 function Movies({ title, type, movies, page }) {
   const currentPage = parseInt(page);
   const [previousPagePath, nextPagePath] = usePage(currentPage);
+  const totalPages = movies.total_pages;
 
   return (
     <div className={styles.container}>
@@ -36,12 +37,14 @@ function Movies({ title, type, movies, page }) {
             </a>
           </Link>
         ) : null}
-        <Link href={nextPagePath}>
-          <a className={styles.nextPage}>
-            <span>Next Page </span>
-            <FontAwesomeIcon icon={faArrowRight} />
-          </a>
-        </Link>
+        {currentPage < totalPages ? (
+          <Link href={nextPagePath}>
+            <a className={styles.nextPage}>
+              <span>Next Page </span>
+              <FontAwesomeIcon icon={faArrowRight} />
+            </a>
+          </Link>
+        ) : null}
       </div>
     </div>
   );
