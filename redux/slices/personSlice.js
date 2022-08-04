@@ -17,7 +17,7 @@ export const getPerson = createAsyncThunk(
 export const getPersonMovies = createAsyncThunk(
   "person/movies",
   async (values) => {
-    return await fetch(`${process.env.BASE_URL}/api/person/movies/${values.id}/${values.page}`).then((res) => res.json());
+    return await fetch(`${process.env.BASE_URL}/api/person/${values.id}/${values.page}`).then((res) => res.json());
   }
 );
 
