@@ -16,16 +16,14 @@ import { usePage } from "../hooks/usePage";
 import Header from "./Header";
 import Recommendations from "./movie/Recommendations";
 
-function Person({ person, movies, page }) {
+function Person({ person, movies, page, totalPages }) {
   const imgSrc = `${process.env.IMAGE_BASE_URL}/w780${person?.profile_path}`;
 
   const birthday = new Date(person?.birthday).getFullYear();
   const deathday = person?.deathday !== null ? new Date(person?.deathday).getFullYear() : null;
 
-  const currentPage = parseInt(page);
-  const totalPages = movies?.total_pages;
+  const currentPage = +page;
   const [previousPagePath, nextPagePath] = usePage(currentPage);
-
   return (
     <div className={styles.container}>
       <Header title={person?.name} type="information" />

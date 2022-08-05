@@ -3,8 +3,8 @@ import { HYDRATE } from "next-redux-wrapper";
 
 const initialState = {
   items: [],
+  totalPages: "",
   recommendations: [],
-  isLoading: false,
 };
 
 // prettier-ignore
@@ -46,20 +46,20 @@ const moviesSlice = createSlice({
   extraReducers: {
     [getPopular.fulfilled]: (state, action) => {
       state.items = [...action.payload.results];
+      state.totalPages = action.payload.total_pages;
     },
     [getTopRated.fulfilled]: (state, action) => {
       state.items = [...action.payload.results];
-      state.isLoading = false;
+      state.totalPages = action.payload.total_pages;
     },
     [getUpcoming.fulfilled]: (state, action) => {
       state.items = [...action.payload.results];
+      state.totalPages = action.payload.total_pages;
     },
     [getRecommendations.fulfilled]: (state, action) => {
       state.recommendations = [...action.payload.results];
     },
   },
 });
-
-export const { cleanUpItems, cleanUpRecommendations } = moviesSlice.actions;
 
 export default moviesSlice.reducer;

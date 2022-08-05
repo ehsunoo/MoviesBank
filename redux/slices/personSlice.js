@@ -3,6 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 const initialState = {
   item: {},
   items: [],
+  totalPages: "",
 };
 
 // prettier-ignore
@@ -30,6 +31,7 @@ const personSlice = createSlice({
     },
     [getPersonMovies.fulfilled]: (state, action) => {
       state.items = [...action.payload.results];
+      state.totalPages = action.payload.total_pages;
     },
   },
 });

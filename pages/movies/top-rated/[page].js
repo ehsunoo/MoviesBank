@@ -11,7 +11,7 @@ import { getTopRated } from "../../../redux/slices/moviesSlice";
 import Movies from "../../../components/Movies";
 import LoadingSpinner from "../../../components/LoadingSpinner";
 
-function TopRated({ movies }) {
+function TopRated({ movies, totalPages }) {
   const router = useRouter();
   const currentPage = router.query.page;
   if (router.isFallback) return <LoadingSpinner />;
@@ -20,7 +20,7 @@ function TopRated({ movies }) {
       <Head>
         <title>Movies Bank | Top Rated Movies</title>
       </Head>
-      <Movies title="Top Rated" type="Movies" movies={movies} page={currentPage} />;
+      <Movies title="Top Rated" type="Movies" movies={movies} page={currentPage} totalPages={totalPages} />;
     </>
   );
 }
@@ -39,6 +39,7 @@ export const getStaticProps = wrapper.getStaticProps((store) => async (context) 
   return {
     props: {
       movies: data.movies.items,
+      totalPages: data.movies.totalPages,
     },
   };
 });

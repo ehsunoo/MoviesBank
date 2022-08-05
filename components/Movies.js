@@ -15,10 +15,9 @@ import { usePage } from "../hooks/usePage";
 import Card from "./Card";
 import Header from "./Header";
 
-function Movies({ title, type, movies, page }) {
-  const currentPage = parseInt(page);
+function Movies({ title, type, movies, page, totalPages }) {
+  const currentPage = +page;
   const [previousPagePath, nextPagePath] = usePage(currentPage);
-  const totalPages = movies.total_pages;
 
   return (
     <div className={styles.container}>
@@ -37,7 +36,7 @@ function Movies({ title, type, movies, page }) {
             </a>
           </Link>
         ) : null}
-        {currentPage < totalPages ? (
+        {+currentPage < +totalPages ? (
           <Link href={nextPagePath}>
             <a className={styles.nextPage}>
               <span>Next Page </span>
