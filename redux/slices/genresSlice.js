@@ -3,6 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 const initialState = {
   list: [],
   items: [],
+  totalPages: "",
   isLoading: true,
 };
 
@@ -32,6 +33,7 @@ const genresSlice = createSlice({
     },
     [getGenre.fulfilled]: (state, action) => {
       state.items = action.payload.results;
+      state.totalPages = action.payload.total_pages;
     },
   },
 });

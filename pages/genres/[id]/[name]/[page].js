@@ -42,6 +42,7 @@ export const getStaticProps = wrapper.getStaticProps((store) => async (context) 
   return {
     props: {
       movies: data.genres.items,
+      totalPages: data.genres.totalPages,
       name,
     },
   };
