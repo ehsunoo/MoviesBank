@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
   items: [],
+  totalPages: "",
 };
 
 // prettier-ignore
@@ -22,6 +23,7 @@ const searchSlice = createSlice({
   extraReducers: {
     [searchMovie.fulfilled]: (state, action) => {
       state.items = [...action.payload.results];
+      state.totalPages = action.payload.total_pages;
     },
   },
 });

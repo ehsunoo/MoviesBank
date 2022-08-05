@@ -13,6 +13,7 @@ function Search() {
   const router = useRouter();
   const dispatch = useDispatch();
   const movies = useSelector((state) => state?.search?.items);
+  const totalPages = useSelector((state) => state?.search?.totalPages);
 
   useEffect(() => {
     if (router?.isReady) {
@@ -28,7 +29,7 @@ function Search() {
       <Head>
         <title>Movies Bank | Search:{router?.query?.name}</title>
       </Head>
-      <Movies title={router?.query?.name} type="Search Results" movies={movies} page={router?.query?.page} />;
+      <Movies title={router?.query?.name} type="Search Results" movies={movies} page={router?.query?.page} totalPages={totalPages} />;
     </>
   );
 }
