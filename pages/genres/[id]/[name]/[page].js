@@ -10,7 +10,7 @@ import { wrapper } from "../../../../redux/store";
 import Movies from "../../../../components/Movies";
 import LoadingSpinner from "../../../../components/LoadingSpinner";
 
-function Genres({ movies, name }) {
+function Genres({ movies, name, totalPages }) {
   const router = useRouter();
   const currentPage = router.query.page;
   if (router.isFallback) return <LoadingSpinner />;
@@ -19,7 +19,7 @@ function Genres({ movies, name }) {
       <Head>
         <title>Movies Bank | {name} Genre</title>
       </Head>
-      <Movies title={`${name}'s`} type="Genre" movies={movies} page={currentPage} />;
+      <Movies title={`${name}'s`} type="Genre" movies={movies} page={currentPage} totalPages={totalPages} />;
     </>
   );
 }
