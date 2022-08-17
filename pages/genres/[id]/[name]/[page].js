@@ -10,7 +10,7 @@ import { wrapper } from "../../../../redux/store";
 import Movies from "../../../../components/Movies";
 import LoadingSpinner from "../../../../components/LoadingSpinner";
 
-function Genres({ movies, name, totalPages }) {
+function GenresPage({ movies, name, totalPages }) {
   const router = useRouter();
   const currentPage = router.query.page;
   if (router.isFallback) return <LoadingSpinner />;
@@ -48,4 +48,4 @@ export const getStaticProps = wrapper.getStaticProps((store) => async (context) 
   };
 });
 
-export default Genres;
+export default GenresPage;

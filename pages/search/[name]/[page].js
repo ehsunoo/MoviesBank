@@ -9,7 +9,7 @@ import { searchMovie, cleanUpItems } from "../../../redux/slices/searchSlice";
 // Components
 import Movies from "../../../components/Movies";
 
-function Search() {
+function SearchPage() {
   const router = useRouter();
   const dispatch = useDispatch();
   const movies = useSelector((state) => state?.search?.items);
@@ -34,4 +34,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default SearchPage;

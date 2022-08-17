@@ -12,7 +12,7 @@ import { getRecommendations } from "../../redux/slices/moviesSlice";
 import Movie from "../../components/Movie";
 import LoadingSpinner from "../../components/LoadingSpinner";
 
-function MovieDetail(props) {
+function MoviePage(props) {
   const router = useRouter();
   const data = { ...props };
   if (router.isFallback) return <LoadingSpinner />;
@@ -48,4 +48,4 @@ export const getStaticProps = wrapper.getStaticProps((store) => async (context) 
   };
 });
 
-export default MovieDetail;
+export default MoviePage;

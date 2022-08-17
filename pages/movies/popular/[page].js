@@ -11,7 +11,7 @@ import { getPopular } from "../../../redux/slices/moviesSlice";
 import Movies from "../../../components/Movies";
 import LoadingSpinner from "../../../components/LoadingSpinner";
 
-function Popular({ movies, totalPages }) {
+function PopularPage({ movies, totalPages }) {
   const router = useRouter();
   const currentPage = router.query.page;
   if (router.isFallback) return <LoadingSpinner />;
@@ -44,4 +44,4 @@ export const getStaticProps = wrapper.getStaticProps((store) => async (context) 
   };
 });
 
-export default Popular;
+export default PopularPage;
