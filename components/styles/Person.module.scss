@@ -112,19 +112,13 @@
   }
 }
 
-// Desktop
-@media screen and (min-width: 1024) {
-  .main {
-    flex-direction: row;
-  }
-}
-
 // Tablet
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .container {
     flex: 5;
   }
   .main {
+    display: flex;
     flex-direction: column;
   }
   .title {
@@ -138,6 +132,7 @@
     flex: 0;
   }
   .main {
+    display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0.5rem;
