@@ -3,6 +3,8 @@ A modern movie's information library built with Next.js
 
 ![screenshot](https://user-images.githubusercontent.com/7151395/182613961-e1853669-cc64-412b-a10a-6e5029a862a7.jpg)
 
+## API
+[TMDB APIs](https://www.themoviedb.org) used for accessing movies information.
 
 ## Technologies
 
