@@ -43,7 +43,7 @@ function Person({ person, movies, page, totalPages }) {
             <p>{person?.biography}</p>
           </div>
           <div className={styles.imdb}>
-            <a href={`https://www.imdb.com/title/${person?.imdb_id}`}>IMDB</a>
+            <a href={`https://www.imdb.com/name/${person?.imdb_id}`}>IMDB</a>
           </div>
         </div>
       </div>
