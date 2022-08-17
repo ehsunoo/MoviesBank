@@ -45,6 +45,7 @@ export const getStaticProps = wrapper.getStaticProps((store) => async (context) 
       cast: data.movie.cast,
       recommendations: data.movies.recommendations,
     },
+    revalidate: 7 * 86400,
   };
 });
 

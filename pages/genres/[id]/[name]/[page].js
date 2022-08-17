@@ -45,6 +45,7 @@ export const getStaticProps = wrapper.getStaticProps((store) => async (context) 
       totalPages: data.genres.totalPages,
       name,
     },
+    revalidate: 86400,
   };
 });
 

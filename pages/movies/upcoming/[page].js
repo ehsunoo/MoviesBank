@@ -40,6 +40,7 @@ export const getStaticProps = wrapper.getStaticProps((store) => async (context) 
       movies: data.movies.items,
       totalPages: data.movies.totalPages,
     },
+    revalidate: 86400,
   };
 });
 
